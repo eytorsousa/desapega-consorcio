@@ -1,0 +1,16 @@
+body {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+}
+
+main {
+    background-image: url('../assets/images/background2.jpg');
+    filter: brightness(0.5);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: solid 1px blue;
+}
