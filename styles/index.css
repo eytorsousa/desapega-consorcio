@@ -2,15 +2,130 @@ body {
     background-color: white;
     display: flex;
     flex-direction: column;
-    width: 100%;
     height: fit-content;
+    width: 100%;
 }
 
 main {
     background-image: url('../assets/images/background2.jpg');
-    filter: brightness(0.5);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border: solid 1px blue;
+    height: 850px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+main .overlay {
+    background-color: black;
+    height: 100%;
+    left: 0;
+    opacity: 0.7; 
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+main .content {
+    background-color: transparent;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+    margin: 300px;
+    position: relative;
+    width: fit-content;
+    z-index: 2;
+}
+
+main .content h1 {
+    margin-top: 30px;
+}
+
+main .content span {
+    color: var(--yellow);
+}
+
+main .content a {
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 50px;
+    outline: none;
+    padding: 15px 30px;
+    text-align: center;
+    width: 500px;
+}
+
+.black {
+    background-color: rgba(0, 0, 0, 0.99);
+    color: white;
+    padding: 100px 0;
+}
+
+.gray {
+    background-color: rgba(0, 0, 0, 0.95);
+    color: white;
+    padding: 100px 0;
+}
+
+.white {
+    background-color: rgb(235, 235, 235);
+    color: black;
+    padding: 100px 0;
+}
+
+.resign, .whoweare {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.resign .text, .whoweare .text {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    gap: 35px;
+    text-align: justify;
+    width: 500px;
+}
+
+.whoweare .text {
+    font-size: 20px;
+}
+
+.resign h2 {
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.resign p {
+    margin: 0 auto;
+    width: 450px;
+}
+
+.text a {
+    background-color: transparent;
+    border: solid 2px var(--yellow);
+    border-radius: 6px;
+    color: var(--yellow);
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 auto;
+    outline: none;
+    padding: 15px 30px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    width: 500px;
+}
+
+.text a:hover {
+    background-color: var(--yellow);
+    color: white;
 }

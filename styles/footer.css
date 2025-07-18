@@ -1,0 +1,59 @@
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .info {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: rgb(185, 184, 184);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-evenly;
+    padding: 100px 0;
+}
+
+footer .main-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: justify;
+    width: 300px;
+}
+
+footer .contacts, footer .address{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 350px;
+}
+
+
+footer .contacts h3, .address h3{
+    text-align: center;
+}
+
+footer .legal {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.97);
+    color: rgb(185, 184, 184);
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+footer .by {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.98);
+    color: rgb(185, 184, 184);
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+footer .by a {
+    color: var(--yellow);
+    text-decoration: underline;
+}
