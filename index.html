@@ -9,17 +9,53 @@
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/footer.css">
 
+    <script src="./src/index.js" defer ></script>
+    <script src="./src/popup.js" defer ></script>
+
+
     <title>DESAPEGA CONSÓRCIO - Recuperação de valores</title>
 </head>
 <body>
-    <a href="#top" class="back_to_top">
+    <div class="contact_popup" id="contactPopup">
+        <div class="popup_content">
+            <button class="close_popup" id="closePopup">&times;</button>
+
+            <div class="form_toggle">
+                <button id="form1Btn">Formulário 1</button>
+                <button id="form2Btn">Formulário 2</button>
+            </div>
+
+            <form id="form1" class="form_section">
+                <label>Nome:
+                    <input type="text" required>
+                </label>
+                <label>Email:
+                    <input type="email" required>
+                </label>
+                <button type="submit">Enviar</button>
+                </form>
+
+                <form id="form2" class="form_section hidden">
+                <label>Assunto:
+                    <input type="text" required>
+                </label>
+                <label>Mensagem:
+                    <textarea required></textarea>
+                </label>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+
+    <a href="#top" class="back_to_top extra">
         <img src="./assets/icons/uparrow.png" alt="Voltar ao topo">
     </a>
-    <button class="contact_button">
-        <!-- <img src="#" alt="#"> -->
+    <button class="contact_button extra">
+        <img src="./assets/icons/call.png" alt="Call us">
         Fale conosco
     </button>
-    <a href="#" target="_blank" class="whatsapp_button">
+    <a href="#" target="_blank" class="whatsapp_button extra">
         <img src="./assets/icons/whatsapp.png" alt="WhatsApp">
     </a>
 
