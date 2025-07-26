@@ -2,11 +2,11 @@ const popup = document.getElementById('contactPopup');
 const openBtn = document.querySelector('.contact_button');
 const closeBtn = document.getElementById('closePopup');
 
-const form1 = document.getElementById('form1');
-const form2 = document.getElementById('form2');
+const form1 = document.querySelector('#form1');
+const form2 = document.querySelector('#form2');
 
-const form1Btn = document.getElementById('form1Btn');
-const form2Btn = document.getElementById('form2Btn');
+const form1Btn = document.querySelector('#form1_btn');
+const form2Btn = document.querySelector('#form2_btn');
 
 openBtn.addEventListener('click', () => {
   popup.classList.add('show');
@@ -22,12 +22,14 @@ popup.addEventListener('click', (e) => {
   }
 });
 
-form1Btn.addEventListener('click', () => {
-  form1.classList.remove('hidden');
-  form2.classList.add('hidden');
-});
+form1Btn.addEventListener('click', () => toggleButton(form1Btn));
+form2Btn.addEventListener('click', () => toggleButton(form2Btn));
 
-form2Btn.addEventListener('click', () => {
-  form1.classList.add('hidden');
-  form2.classList.remove('hidden');
-});
+function toggleButton(button) {
+  const buttons = [form1Btn, form2Btn];
+  const forms = [form1, form2];
+  buttons.forEach(btn => btn.classList.remove('selected'));
+  forms.forEach(form => form.classList.add('hidden'));
+  forms[buttons.indexOf(button)].classList.remove('hidden');
+  button.classList.add('selected');
+}

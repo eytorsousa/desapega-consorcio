@@ -21,27 +21,88 @@
             <button class="close_popup" id="closePopup">&times;</button>
 
             <div class="form_toggle">
-                <button id="form1Btn">Formulário 1</button>
-                <button id="form2Btn">Formulário 2</button>
+                <button id="form1_btn" class="selected">📞 LIGAR AGORA</button>
+                <button id="form2_btn">🕓 AGENDAR LIGAÇÃO</button>
             </div>
 
             <form id="form1" class="form_section">
-                <label>Nome:
-                    <input type="text" required>
-                </label>
-                <label>Email:
-                    <input type="email" required>
-                </label>
+
+                <p>
+                    Desistiu do seu consórcio? Nós podemos ajudar! Entre em contato e saiba mais.
+                </p>
+
+                <input
+                    type="text"
+                    name="nome"
+                    maxlength="30"
+                    minlength="3"
+                    placeholder="Digite seu nome"
+                    required
+                    pattern="[A-Za-zÀ-ÿ\s]+"
+                    title="Digite apenas letras"
+                />
+
+                <input
+                    type="tel"
+                    name="telefone"
+                    maxlength="15"
+                    minlength="10"
+                    inputmode="numeric"
+                    pattern="\d{10,15}"
+                    placeholder="Digite seu número de telefone"
+                    required
+                    title="Digite apenas números, no mínimo 10 dígitos"
+                />
+
                 <button type="submit">Enviar</button>
                 </form>
 
                 <form id="form2" class="form_section hidden">
-                <label>Assunto:
-                    <input type="text" required>
-                </label>
-                <label>Mensagem:
-                    <textarea required></textarea>
-                </label>
+
+                    <p>
+                        Desistiu do seu consórcio? Nós podemos ajudar! Entre em contato e saiba mais.
+                    </p>        
+
+                    <input
+                        type="text"
+                        name="nome"
+                        maxlength="30"
+                        minlength="3"
+                        placeholder="Digite seu nome"
+                        required
+                        pattern="[A-Za-zÀ-ÿ\s]+"
+                        title="Digite apenas letras"
+                    />
+
+                    <input
+                        type="tel"
+                        name="telefone"
+                        maxlength="15"
+                        minlength="10"
+                        inputmode="numeric"
+                        pattern="\d{10,15}"
+                        placeholder="Digite seu número de telefone"
+                        required
+                        title="Digite apenas números, no mínimo 10 dígitos"
+                    />
+
+                    <p>Qual o melhor horário para contato?</p>
+
+                    <div>
+                        <label>
+                            Manhã
+                        <input type="radio" name="horario" value="manha" required />
+                        </label>
+                        <label>
+                            Tarde
+                        <input type="radio" name="horario" value="tarde" required />
+                        </label>
+                        <label>
+                            Noite
+                        <input type="radio" name="horario" value="noite" required />
+                        </label>
+                    </div>
+
                 <button type="submit">Enviar</button>
             </form>
         </div>
@@ -51,11 +112,13 @@
     <a href="#top" class="back_to_top extra">
         <img src="./assets/icons/uparrow.png" alt="Voltar ao topo">
     </a>
+
     <button class="contact_button extra">
         <img src="./assets/icons/call.png" alt="Call us">
         Fale conosco
     </button>
-    <a href="#" target="_blank" class="whatsapp_button extra">
+    
+    <a href="https://wa.me/+5511988154713?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20*DESAPEGA%20CONS%C3%93RCIO*%20e%20quero%20ajuda%20com%20meu%20cons%C3%B3rcio%21" target="_blank" class="whatsapp_button extra">
         <img src="./assets/icons/whatsapp.png" alt="WhatsApp">
     </a>
 
