@@ -14,12 +14,16 @@ openBtn.addEventListener('click', () => {
 });
 
 closeBtn.addEventListener('click', () => closePopup(contactPopup));
-
 contactPopup.addEventListener('click', (e) => {
   if (e.target === contactPopup) {
     closePopup(contactPopup);
   }
 });
+
+function closePopup(popup) {
+  popup.classList.remove('show');
+  popup.classList.add('hidden');
+};
 
 form1Btn.addEventListener('click', () => toggleButton(form1Btn));
 form2Btn.addEventListener('click', () => toggleButton(form2Btn));
@@ -32,33 +36,3 @@ function toggleButton(button) {
   forms[buttons.indexOf(button)].classList.remove('hidden');
   button.classList.add('selected');
 }
-
-const params = new URLSearchParams(window.location.search);
-const warningPopup = document.querySelector('.warning');
-const closeWarningPopup = document.querySelector('#closeWarningPopup');
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  if (params.get('sucesso') === 'true') {
-    if (contactPopup) contactPopup.classList.add('hidden');
-    if (warningPopup) warningPopup.classList.remove('hidden');
-    if (warningPopup) warningPopup.classList.add('show');
-  }
-});
-
-warningPopup.addEventListener('click', (e) => {
-  if (e.target === warningPopup) {
-    window.location.href = "http://127.0.0.1:5500/index.html";
-    closePopup(warningPopup);
-  }
-});
-
-closeWarningPopup.addEventListener('click', () => {
-  window.location.href = "http://127.0.0.1:5500/index.html";
-  closePopup(warningPopup);
-});
-
-function closePopup(popup) {
-  popup.classList.remove('show');
-  popup.classList.add('hidden');
-};

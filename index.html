@@ -11,7 +11,7 @@
 
     <script src="./src/index.js" defer ></script>
     <script src="./src/popup.js" defer ></script>
-
+    <script src="./src/mailer.js" defer ></script>
 
     <title>DESAPEGA CONSÓRCIO - Recuperação de valores</title>
 </head>
@@ -37,34 +37,41 @@
                 <p>
                     Desistiu do seu consórcio? Nós podemos ajudar! Entre em contato e saiba mais.
                 </p>
+                
+                <label class="text-label">
+                    Nome
+                    <input
+                        type="text"
+                        name="Nome"
+                        maxlength="30"
+                        minlength="3"
+                        placeholder="Digite apenas letras"
+                        required
+                        pattern="[A-Za-zÀ-ÿ\s]+"
+                        title="Digite apenas letras"
+                    />
+                </label>
 
-                <input
-                    type="text"
-                    name="Nome"
-                    maxlength="30"
-                    minlength="3"
-                    placeholder="Digite seu nome"
-                    required
-                    pattern="[A-Za-zÀ-ÿ\s]+"
-                    title="Digite apenas letras"
-                />
+                <label class="text-label">
+                    Celular
+                    <input
+                        type="tel"
+                        name="Celular"
+                        maxlength="15"
+                        minlength="10"
+                        inputmode="numeric"
+                        pattern="\d{10,15}"
+                        placeholder="Digite seu número apenas números, com DDD. Ex: 11987654321"
+                        required
+                        title="Digite apenas números, no mínimo 10 dígitos"
+                    />
+                </label>
 
-                <input
-                    type="tel"
-                    name="Celular"
-                    maxlength="15"
-                    minlength="10"
-                    inputmode="numeric"
-                    pattern="\d{10,15}"
-                    placeholder="Digite seu número de WhatsApp"
-                    required
-                    title="Digite apenas números, no mínimo 10 dígitos"
-                />
-
-                <input type="hidden" name="Preferencia" value="Entrar em contato no horário marcado">
+                <input type="hidden" name="Preferencia" value="Entrar em contato o quanto antes">
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html?sucesso=true">
+                <input type="hidden" name="_subject" value="New submission!">
                 
                 <button type="submit">Enviar</button>
             </form>
@@ -75,33 +82,39 @@
                     Desistiu do seu consórcio? Nós podemos ajudar! Entre em contato e saiba mais.
                 </p>        
 
-                <input
-                    type="text"
-                    name="Nome"
-                    maxlength="30"
-                    minlength="3"
-                    placeholder="Digite seu nome"
-                    required
-                    pattern="[A-Za-zÀ-ÿ\s]+"
-                    title="Digite apenas letras"
-                />
+                <label class="text-label">
+                    Nome
+                    <input
+                        type="text"
+                        name="Nome"
+                        maxlength="30"
+                        minlength="3"
+                        placeholder="Digite apenas letras"
+                        required
+                        pattern="[A-Za-zÀ-ÿ\s]+"
+                        title="Digite apenas letras"
+                    />
+                </label>
 
-                <input
-                    type="tel"
-                    name="Celular"
-                    maxlength="15"
-                    minlength="10"
-                    inputmode="numeric"
-                    pattern="\d{10,15}"
-                    placeholder="Digite seu número de WhatsApp"
-                    required
-                    title="Digite apenas números, no mínimo 10 dígitos"
-                />
+                <label class="text-label">
+                    Número de WhatsApp
+                    <input
+                        type="tel"
+                        name="Celular"
+                        maxlength="15"
+                        minlength="10"
+                        inputmode="numeric"
+                        pattern="\d{10,15}"
+                        placeholder="Digite apenas números, com DDD. Ex: 11987654321"
+                        required
+                        title="Digite apenas números, no mínimo 10 dígitos"
+                    />
+                </label>
 
                 
                 <p>Qual o melhor horário para contato?</p>
 
-                <div>
+                <div id="time_selection">
                     <label>
                         Manhã
                     <input type="radio" name="Horario" value="Manhã" required />
@@ -116,10 +129,11 @@
                     </label>
                 </div>
                 
-                <input type="hidden" name="Preferencia" value="Entrar em contato no horário marcado">
+                <input type="hidden" name="Preferencia" value="Entrar em contato no período indicado">
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html?sucesso=true">
+                <input type="hidden" name="_subject" value="New submission!">
 
                 <button type="submit">Enviar</button>
             </form>
@@ -351,19 +365,11 @@
                 />
             </label>
 
-            <label>
-                Extrato do contrato (opcional)
-                <input
-                type="file"
-                name="Extrato"
-                accept=".pdf,.jpg,.jpeg,.png"
-                />
-            </label>
-
             <input type="hidden" name="Preferencia" value="Entrar em contato o quanto antes">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html?sucesso=true">
+            <input type="hidden" name="_subject" value="New submission!">
 
             <input type="submit" value="Enviar" />
         </form>
