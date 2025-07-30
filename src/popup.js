@@ -1,4 +1,4 @@
-const popup = document.getElementById('contactPopup');
+const contactPopup = document.getElementById('contactPopup');
 const openBtn = document.querySelector('.contact_button');
 const closeBtn = document.getElementById('closePopup');
 
@@ -9,16 +9,15 @@ const form1Btn = document.querySelector('#form1_btn');
 const form2Btn = document.querySelector('#form2_btn');
 
 openBtn.addEventListener('click', () => {
-  popup.classList.add('show');
+  contactPopup.classList.add('show');
+  contactPopup.classList.remove('hidden');
 });
 
-const closePopup = () => popup.classList.remove('show');
+closeBtn.addEventListener('click', () => closePopup(contactPopup));
 
-closeBtn.addEventListener('click', closePopup);
-
-popup.addEventListener('click', (e) => {
-  if (e.target === popup) {
-    closePopup();
+contactPopup.addEventListener('click', (e) => {
+  if (e.target === contactPopup) {
+    closePopup(contactPopup);
   }
 });
 
@@ -33,3 +32,33 @@ function toggleButton(button) {
   forms[buttons.indexOf(button)].classList.remove('hidden');
   button.classList.add('selected');
 }
+
+const params = new URLSearchParams(window.location.search);
+const warningPopup = document.querySelector('.warning');
+const closeWarningPopup = document.querySelector('#closeWarningPopup');
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (params.get('sucesso') === 'true') {
+    if (contactPopup) contactPopup.classList.add('hidden');
+    if (warningPopup) warningPopup.classList.remove('hidden');
+    if (warningPopup) warningPopup.classList.add('show');
+  }
+});
+
+warningPopup.addEventListener('click', (e) => {
+  if (e.target === warningPopup) {
+    window.location.href = "http://127.0.0.1:5500/index.html";
+    closePopup(warningPopup);
+  }
+});
+
+closeWarningPopup.addEventListener('click', () => {
+  window.location.href = "http://127.0.0.1:5500/index.html";
+  closePopup(warningPopup);
+});
+
+function closePopup(popup) {
+  popup.classList.remove('show');
+  popup.classList.add('hidden');
+};

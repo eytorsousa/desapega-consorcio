@@ -16,6 +16,13 @@
     <title>DESAPEGA CONSÓRCIO - Recuperação de valores</title>
 </head>
 <body>
+    <div class="warning hidden">
+        <div class="warning_content">
+            <button class="close_popup" id="closeWarningPopup">&times;</button>
+            <p><strong>Sucesso! </strong>Recebemos seus dados!</p>
+            <p>Em breve, <strong>um de nossos atendentes entrará em contato </strong>para realizar seu atendimento.</p>
+        </div>
+    </div>
     <div class="contact_popup" id="contactPopup">
         <div class="popup_content">
             <button class="close_popup" id="closePopup">&times;</button>
@@ -25,7 +32,7 @@
                 <button id="form2_btn">🕓 AGENDAR LIGAÇÃO</button>
             </div>
 
-            <form id="form1" class="form_section">
+            <form id="form1" class="form_section" method="POST" action="https://formsubmit.co/eytorlima@gmail.com">
 
                 <p>
                     Desistiu do seu consórcio? Nós podemos ajudar! Entre em contato e saiba mais.
@@ -33,7 +40,7 @@
 
                 <input
                     type="text"
-                    name="nome"
+                    name="Nome"
                     maxlength="30"
                     minlength="3"
                     placeholder="Digite seu nome"
@@ -44,70 +51,80 @@
 
                 <input
                     type="tel"
-                    name="telefone"
+                    name="Celular"
                     maxlength="15"
                     minlength="10"
                     inputmode="numeric"
                     pattern="\d{10,15}"
-                    placeholder="Digite seu número de telefone"
+                    placeholder="Digite seu número de WhatsApp"
                     required
                     title="Digite apenas números, no mínimo 10 dígitos"
                 />
 
+                <input type="hidden" name="Preferencia" value="Entrar em contato no horário marcado">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html?sucesso=true">
+                
                 <button type="submit">Enviar</button>
-                </form>
+            </form>
 
-                <form id="form2" class="form_section hidden">
+            <form id="form2" class="form_section hidden" method="POST" action="https://formsubmit.co/eytorlima@gmail.com">
 
-                    <p>
-                        Desistiu do seu consórcio? Nós podemos ajudar! Entre em contato e saiba mais.
-                    </p>        
+                <p>
+                    Desistiu do seu consórcio? Nós podemos ajudar! Entre em contato e saiba mais.
+                </p>        
 
-                    <input
-                        type="text"
-                        name="nome"
-                        maxlength="30"
-                        minlength="3"
-                        placeholder="Digite seu nome"
-                        required
-                        pattern="[A-Za-zÀ-ÿ\s]+"
-                        title="Digite apenas letras"
-                    />
+                <input
+                    type="text"
+                    name="Nome"
+                    maxlength="30"
+                    minlength="3"
+                    placeholder="Digite seu nome"
+                    required
+                    pattern="[A-Za-zÀ-ÿ\s]+"
+                    title="Digite apenas letras"
+                />
 
-                    <input
-                        type="tel"
-                        name="telefone"
-                        maxlength="15"
-                        minlength="10"
-                        inputmode="numeric"
-                        pattern="\d{10,15}"
-                        placeholder="Digite seu número de telefone"
-                        required
-                        title="Digite apenas números, no mínimo 10 dígitos"
-                    />
+                <input
+                    type="tel"
+                    name="Celular"
+                    maxlength="15"
+                    minlength="10"
+                    inputmode="numeric"
+                    pattern="\d{10,15}"
+                    placeholder="Digite seu número de WhatsApp"
+                    required
+                    title="Digite apenas números, no mínimo 10 dígitos"
+                />
 
-                    <p>Qual o melhor horário para contato?</p>
+                
+                <p>Qual o melhor horário para contato?</p>
 
-                    <div>
-                        <label>
-                            Manhã
-                        <input type="radio" name="horario" value="manha" required />
-                        </label>
-                        <label>
-                            Tarde
-                        <input type="radio" name="horario" value="tarde" required />
-                        </label>
-                        <label>
-                            Noite
-                        <input type="radio" name="horario" value="noite" required />
-                        </label>
-                    </div>
+                <div>
+                    <label>
+                        Manhã
+                    <input type="radio" name="Horario" value="Manhã" required />
+                    </label>
+                    <label>
+                        Tarde
+                    <input type="radio" name="Horario" value="Tarde" required />
+                    </label>
+                    <label>
+                        Noite
+                    <input type="radio" name="Horario" value="Noite" required />
+                    </label>
+                </div>
+                
+                <input type="hidden" name="Preferencia" value="Entrar em contato no horário marcado">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html?sucesso=true">
 
                 <button type="submit">Enviar</button>
             </form>
         </div>
     </div>
-
 
     <a href="#top" class="back_to_top extra">
         <img src="./assets/icons/uparrow.png" alt="Voltar ao topo">
@@ -235,18 +252,18 @@
             </p>
         </div>
 
-        <form method="POST" action="">
+        <form method="POST" action="https://formsubmit.co/eytorlima@gmail.com">
             <label>
                 Nome completo
-            <input
-                type="text"
-                name="Nome"
-                placeholder="João Silva"
-                maxlength="50"
-                minlength="3"
-                required
-                pattern="[A-Za-zÀ-ÿ\s]+"
-                title="Digite apenas letras"
+                <input
+                    type="text"
+                    name="Nome"
+                    placeholder="João Silva"
+                    maxlength="50"
+                    minlength="3"
+                    required
+                    pattern="[A-Za-zÀ-ÿ\s]+"
+                    title="Digite apenas letras"
                 />
             </label>
 
@@ -277,7 +294,7 @@
                 />
             </label>
 
-            <select name="tipo" required>
+            <select name="Tipo" required>
                 <option value="" disabled selected>Tipo de consórcio</option>
                 <option value="imovel">Imóvel</option>
                 <option value="automovel">Automóvel</option>
@@ -285,7 +302,7 @@
                 <option value="outros">Outros</option>
             </select>
 
-            <select name="situacao" required>
+            <select name="Situacao" required>
                 <option value="" disabled selected>Situação do consórcio</option>
                 <option value="cancelado">Cancelado</option>
                 <option value="atrasado">Atrasado</option>
@@ -321,7 +338,7 @@
             </label>
 
             <label>
-                Valor total pago
+                Valor total pago (aproximado)
                 <input
                 type="text"
                 name="ValorPago"
@@ -338,10 +355,15 @@
                 Extrato do contrato (opcional)
                 <input
                 type="file"
-                name="extrato"
+                name="Extrato"
                 accept=".pdf,.jpg,.jpeg,.png"
                 />
             </label>
+
+            <input type="hidden" name="Preferencia" value="Entrar em contato o quanto antes">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html?sucesso=true">
 
             <input type="submit" value="Enviar" />
         </form>

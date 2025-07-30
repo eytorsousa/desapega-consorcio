@@ -195,3 +195,33 @@
   margin-top: 20px;
   width: 100%;
 }
+
+.warning {
+  align-items: center;
+  background-color: rgba(0,0,0,0.6);
+  display: none;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 999;
+}
+
+.warning.show {
+  display: flex;
+}
+
+.warning_content {
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: fit-content;
+  margin: auto auto;
+  padding: 30px;
+  position: relative;
+  width: 700px;
+}
