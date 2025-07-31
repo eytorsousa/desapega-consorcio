@@ -130,6 +130,30 @@ main .content a {
     color: white;
 }
 
+.feedbacks, .feedbacks_section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: space-evenly;
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .contact {
     align-items: center;
     display: flex;
@@ -218,7 +242,7 @@ main .content a {
 
 .questions details {
   &::details-content {
-    transition: height 1s; /* useful as a fallback? */
+    transition: height 1s; 
     transition:
       height 1s,
       content-visibility 1s allow-discrete;
@@ -227,9 +251,9 @@ main .content a {
   }
   
   &[open]::details-content {
-    height: auto; /* useful as a fallback? */
-    height: calc-size(auto); /* useful as a fallback? */
-    height: calc-size(auto, size);  /* or eventually: calc-size(min-content, size) ? */
+    height: auto; 
+    height: calc-size(auto); 
+    height: calc-size(auto, size);   
   }
 }
 
@@ -244,5 +268,3 @@ main .content a {
     text-align: justify;
     width: 90%;
 }
-
-

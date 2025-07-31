@@ -9,6 +9,11 @@
     --font-family: 'Montserrat', 'Arial', sans-serif;
 }
 
+:root {
+    --swiper-pagination-color: var(--yellow);
+    --swiper-navigation-color: var(--yellow);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
