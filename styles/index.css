@@ -68,24 +68,6 @@ main .content a {
     width: 500px;
 }
 
-.black {
-    background-color: rgba(0, 0, 0, 0.99);
-    color: white;
-    padding: 100px 0;
-}
-
-.gray {
-    background-color: rgba(0, 0, 0, 0.95);
-    color: white;
-    padding: 100px 0;
-}
-
-.white {
-    background-color: rgb(235, 235, 235);
-    color: black;
-    padding: 100px 0;
-}
-
 .resign, .whoweare {
     align-items: center;
     display: flex;
@@ -209,6 +191,28 @@ main .content a {
     font-weight: 600;
 }
 
+.enterprises h2 {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.splide__slide {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+.splide__slide img {
+    align-items: center;
+    height: auto;
+    justify-content: center;
+    width: 160px;
+}
+/* .splide__track,
+.splide:hover,
+.splide:focus {
+  pointer-events: none;
+} */
 
 .contact {
     align-items: center;

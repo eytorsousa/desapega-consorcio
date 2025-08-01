@@ -2,8 +2,11 @@ const splide = new Splide('.splide', {
   type: 'loop',
   drag: false,
   arrows: false,
+  pauseOnFocus: false,
+  pauseOnHover: false,
+  pagination: false,
   focus: 'center',
-  perPage: 3,
+  perPage: 4,
   autoScroll: {
     speed: 1,
   },

@@ -46,3 +46,26 @@ a {
     color: inherit;
 }
 
+.black {
+    background-color: rgba(0, 0, 0, 0.99);
+    color: white;
+    padding: 100px 0;
+}
+
+.gray {
+    background-color: rgba(0, 0, 0, 0.95);
+    color: white;
+    padding: 100px 0;
+}
+
+.white {
+    background-color: rgb(235, 235, 235);
+    color: black;
+    padding: 100px 0;
+}
+
+.ultrawhite {
+    background-color: white;
+    color: black;
+    padding: 100px 0;
+}
